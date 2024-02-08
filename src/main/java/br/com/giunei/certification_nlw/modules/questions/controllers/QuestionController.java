@@ -1,6 +1,6 @@
 package br.com.giunei.certification_nlw.modules.questions.controllers;
 
-import br.com.giunei.certification_nlw.modules.questions.dto.AlternativesResultDTO;
+import br.com.giunei.certification_nlw.modules.students.dto.AlternativesResultDTO;
 import br.com.giunei.certification_nlw.modules.questions.dto.QuestionResultDTO;
 import br.com.giunei.certification_nlw.modules.questions.entities.AlternativesEntity;
 import br.com.giunei.certification_nlw.modules.questions.entities.QuestionEntity;
@@ -32,7 +32,7 @@ public class QuestionController {
                 .id(question.getId())
                 .technology(question.getTechnology())
                 .description(question.getDescription()).build();
-        List<AlternativesResultDTO> alternativesResultDTOS = question.getAlternativesEntities()
+        List<AlternativesResultDTO> alternativesResultDTOS = question.getAlternatives()
                 .stream().map(QuestionController::mapAlternativeToDTO).toList();
 
         dto.setAlternatives(alternativesResultDTOS);

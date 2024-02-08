@@ -1,5 +1,6 @@
 package br.com.giunei.certification_nlw.modules.questions.dto;
 
+import br.com.giunei.certification_nlw.modules.students.dto.AlternativesResultDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
